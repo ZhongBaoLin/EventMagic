@@ -52,7 +52,7 @@ p {
 /* Хедер */
 .header {
     color: rgb(255, 255, 255);
-    background-image: url(./Images/background.jpg);
+    background-image: url(/Images/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -905,4 +905,5 @@ p {
     .footer-column.one {
         flex: 1 1 auto; /* адаптивна ширина на мобільних */
     }
+
 }
