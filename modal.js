@@ -1,9 +1,17 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // щоб не оновлювала сторінку
-  document.getElementById("successModal").style.display = "flex";
-  this.reset(); // очистити форму після відправки
-});
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".contact-form");
+  const modal = document.getElementById("successModal");
+  const closeBtn = document.getElementById("closeModal");
 
-document.getElementById("closeModal").addEventListener("click", function() {
-  document.getElementById("successModal").style.display = "none";
+  if (form && modal && closeBtn) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+      this.reset();
+    });
+
+    closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+  }
 });
